@@ -1,0 +1,45 @@
+[
+  {
+    "bindings": {
+      "shift shift": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "tab": "editor::Indent",
+      "shift-tab": "editor::Outdent"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "n": "project_panel::NewFile",
+      "shift-n": "project_panel::NewDirectory",
+      "d": "project_panel::Trash",
+      "shift-d": "project_panel::Delete",
+      "r": "project_panel::Rename",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "w": "project_panel::Open",
+      "%": "project_panel::CopyRelativePath",
+      "shift-k": "project_panel::CollapseSelectedEntry",
+      "shift-j": "project_panel::ExpandSelectedEntry"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "k": "editor::ContextMenuPrev",
+      "j": "editor::ContextMenuNext"
+    }
+  }
+]
