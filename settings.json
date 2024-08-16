@@ -1,14 +1,6 @@
 {
+  "theme": "One Dark",
   "show_inline_completions": true,
-  "languages": {
-    "TSX": {
-      "show_inline_completions": true
-    }
-  },
-  "telemetry": {
-    "diagnostics": true,
-    "metrics": true
-  },
   "vim_mode": true,
   "tab_size": 2,
   "ui_font_size": 15,
@@ -16,17 +8,27 @@
   "ui_font_family": "Zed Plex Sans",
   "buffer_font_family": "Menlo",
   "format_on_save": "on",
-  "show_completions_on_input": true,
+  "show_completions_on_input": true,:
+  "code_actions_on_format": {
+    "source.fixAll.eslint": true
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
   "inlay_hints": {
     "enabled": false,
     "show_other_hints": false,
     "show_parameter_hints": false,
     "show_type_hints": false
   },
-
   "experimental.theme_overrides": {
     "background.appearance": "transparent",
-    "background": "#2e353eff",
+    "background": "#2e353ef2",
     "title_bar.background": "#2e353ef0",
     "status_bar.background": "#2e353ef0",
     "editor.background": "#00000000",
@@ -39,7 +41,7 @@
     "scrollbar.track.background": "#00000000",
     "scrollbar.thumb.background": "#ffffff21",
     "tab_bar.background": "#00000000",
-    "tab.active_background": "#00000008",
+    "tab.active_background": "#00000000",
     "tab.inactive_background": "#00000000"
   }
 }
