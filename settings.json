@@ -8,7 +8,6 @@
   "ui_font_family": "Zed Plex Sans",
   "buffer_font_family": "Menlo",
   "format_on_save": "on",
-  "show_completions_on_input": true,:
   "code_actions_on_format": {
     "source.fixAll.eslint": true
   },
@@ -27,7 +26,7 @@
     "show_type_hints": false
   },
   "experimental.theme_overrides": {
-    "background.appearance": "transparent",
+    // "background.appearance": "transparent",
     "background": "#2e353ef2",
     "title_bar.background": "#2e353ef0",
     "status_bar.background": "#2e353ef0",

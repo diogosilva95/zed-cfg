@@ -7,21 +7,17 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
+      "tab": "pane::ActivateNextItem",
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
-      "tab": "editor::Indent",
-      "shift-tab": "editor::Outdent"
+      "ctrl-[": "editor::ToggleHunkDiff",
+      "ctrl-]": "editor::RevertSelectedHunks",
+      ">": "editor::Indent",
+      "<": "editor::Outdent"
     }
   },
   {
-    "context": "Editor && vim_mode == normal",
-    "bindings": {
-      "space": "editor::ToggleHunkDiff",
-      "alt-space": "editor::RevertSelectedHunks"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
+    "context": "vim_mode == insert",
     "bindings": {
       "j k": ["workspace::SendKeystrokes", "escape"]
     }
@@ -34,12 +30,14 @@
       "d": "project_panel::Trash",
       "shift-d": "project_panel::Delete",
       "r": "project_panel::Rename",
-      "c": "project_panel::Copy",
+      "y": "project_panel::Copy",
       "p": "project_panel::Paste",
       "w": "project_panel::Open",
       "%": "project_panel::CopyRelativePath",
       "shift-k": "project_panel::CollapseSelectedEntry",
-      "shift-j": "project_panel::ExpandSelectedEntry"
+      "shift-j": "project_panel::ExpandSelectedEntry",
+      "ctrl-d": ["workspace::SendKeystrokes", "j j j j j j j j"],
+      "ctrl-u": ["workspace::SendKeystrokes", "k k k k k k k k"]
     }
   },
   {
