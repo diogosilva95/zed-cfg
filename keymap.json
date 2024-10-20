@@ -1,25 +1,20 @@
 [
   {
     "bindings": {
-      "shift shift": "project_panel::ToggleFocus"
+      "shift shift": "project_panel::ToggleFocus",
+      "alt-p": "projects::OpenRecent",
+      "alt-b": "branches::OpenRecent"
     }
   },
   {
     "context": "VimControl && !menu",
     "bindings": {
       "tab": "pane::ActivateNextItem",
+      "space": "outline::Toggle",
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
-      "ctrl-[": "editor::ToggleHunkDiff",
-      "ctrl-]": "editor::RevertSelectedHunks",
       ">": "editor::Indent",
       "<": "editor::Outdent"
-    }
-  },
-  {
-    "context": "vim_mode == insert",
-    "bindings": {
-      "j k": ["workspace::SendKeystrokes", "escape"]
     }
   },
   {
