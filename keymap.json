@@ -2,19 +2,25 @@
   {
     "bindings": {
       "shift shift": "project_panel::ToggleFocus",
-      "alt-p": "projects::OpenRecent",
-      "alt-b": "branches::OpenRecent"
+      "ctrl-]": "projects::OpenRecent",
+      "ctrl-[": "branches::OpenRecent"
     }
   },
   {
-    "context": "VimControl && !menu",
+    "context": "vim_mode == normal",
     "bindings": {
       "tab": "pane::ActivateNextItem",
       "space": "outline::Toggle",
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
       ">": "editor::Indent",
-      "<": "editor::Outdent"
+      "<": "editor::Outdent",
+      "[ x": "editor::SelectLargerSyntaxNode",
+      "] x": "editor::SelectSmallerSyntaxNode",
+      "[ d": "editor::GoToDiagnostic",
+      "] d": "editor::GoToPrevDiagnostic",
+      "[ c": "editor::GoToHunk",
+      "] c": "editor::GoToPrevHunk"
     }
   },
   {
@@ -28,7 +34,7 @@
       "y": "project_panel::Copy",
       "p": "project_panel::Paste",
       "w": "project_panel::Open",
-      "%": "project_panel::CopyRelativePath",
+      "shift-r": "project_panel::CopyRelativePath",
       "shift-k": "project_panel::CollapseSelectedEntry",
       "shift-j": "project_panel::ExpandSelectedEntry",
       "ctrl-d": ["workspace::SendKeystrokes", "j j j j j j j j"],

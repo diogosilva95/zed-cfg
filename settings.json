@@ -1,14 +1,22 @@
 {
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
   "theme": "One Dark",
   "show_inline_completions": true,
   "vim_mode": true,
   "tab_size": 2,
   "ui_font_size": 14.2,
+  "soft_wrap": "editor_width",
   "buffer_font_size": 12,
   "ui_font_family": "Zed Plex Sans",
   "buffer_font_family": "Menlo",
   "format_on_save": "on",
-  "cursor_shape": "underscore",
+  "project_panel": {
+    "scrollbar": {
+      "show": "never"
+    }
+  },
   "command_aliases": { "Q": "q", "W": "w" },
   "relative_line_numbers": true,
   "toolbar": {
