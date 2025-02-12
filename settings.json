@@ -1,14 +1,16 @@
 {
   "features": {
-    "inline_completion_provider": "supermaven"
+    "inline_completion_provider": "copilot"
   },
   "theme": "One Dark",
   "show_inline_completions": true,
   "vim_mode": true,
   "tab_size": 2,
-  "ui_font_size": 14.2,
+  "ui_font_size": 13,
+  "buffer_font_size": 11.0,
+  // "ui_font_size": 15,
+  // "buffer_font_size": 13,
   "soft_wrap": "editor_width",
-  "buffer_font_size": 12,
   "ui_font_family": "Zed Plex Sans",
   "buffer_font_family": "Menlo",
   "format_on_save": "on",
@@ -24,6 +26,7 @@
     "quick_actions": false
   },
   "code_actions_on_format": {
+    // "source.organizeImports": true,
     "source.fixAll.eslint": true
   },
   "telemetry": {
@@ -41,6 +44,7 @@
   },
   "experimental.theme_overrides": {
     "background": "#363f4a",
+    "surface.background": "#363f4a",
     "title_bar.background": "#363f4a",
     "status_bar.background": "#363f4a",
     "editor.background": "#00000000",
