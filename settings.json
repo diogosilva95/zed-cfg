@@ -1,20 +1,46 @@
 {
+  "agent": {
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-latest"
+    },
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    }
+  },
   "features": {
-    "inline_completion_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "theme": "One Dark",
-  "show_inline_completions": true,
+  "show_edit_predictions": true,
   "vim_mode": true,
   "tab_size": 2,
-  "ui_font_size": 13,
-  "buffer_font_size": 11.0,
-  // "ui_font_size": 15,
-  // "buffer_font_size": 13,
-  "soft_wrap": "editor_width",
+  "cursor_blink": false,
+  "ui_font_size": 12,
+  "buffer_font_size": 10,
+  "agent_font_size": 12,
+  "soft_wrap": "none",
   "ui_font_family": "Zed Plex Sans",
   "buffer_font_family": "Menlo",
   "format_on_save": "on",
+  // "formatter": {
+  //   "language_server": {
+  //     "name": "biome"
+  //   }
+  // },
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false
+  },
   "project_panel": {
+    "show_diagnostics": "all",
+    "indent_guides": {
+      "show": "never"
+    },
+    "sticky_scroll": false,
     "scrollbar": {
       "show": "never"
     }
@@ -26,7 +52,6 @@
     "quick_actions": false
   },
   "code_actions_on_format": {
-    // "source.organizeImports": true,
     "source.fixAll.eslint": true
   },
   "telemetry": {
@@ -42,11 +67,31 @@
   "tabs": {
     "file_icons": true
   },
+  "languages": {
+    "SQL": {
+      "formatter": {
+        "external": {
+          "command": "sql-formatter",
+          "arguments": [
+            "--indent",
+            "2",
+            "--keywords",
+            "lowercase",
+            "--lines",
+            "100",
+            "--spaces",
+            "4"
+          ]
+        }
+      }
+    }
+  },
   "experimental.theme_overrides": {
-    "background": "#363f4a",
-    "surface.background": "#363f4a",
-    "title_bar.background": "#363f4a",
-    "status_bar.background": "#363f4a",
+    "background": "#303742",
+    "background.appearance": "transparent",
+    "surface.background": "#303742",
+    "title_bar.background": "#303742",
+    "status_bar.background": "#303742",
     "editor.background": "#00000000",
     "editor.gutter.background": "#00000000",
     "editor.active_line.background": "#00000000",
@@ -55,7 +100,10 @@
     "toolbar.background": "#00000003",
     "scrollbar.track.border": "#00000000",
     "scrollbar.track.background": "#00000000",
-    "scrollbar.thumb.background": "#ffffff21",
+    "scrollbar.thumb.border": "00000000",
+    "scrollbar.thumb.background": "#00000000",
+    "scrollbar.thumb.active_background": "#00000000",
+    "scrollbar.thumb.hover_background": "#00000000",
     "tab_bar.background": "#00000000",
     "tab.active_background": "#00000000",
     "tab.inactive_background": "#00000000",

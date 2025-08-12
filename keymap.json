@@ -1,9 +1,11 @@
 [
   {
     "bindings": {
+      "ctrl ctrl": "agent::ToggleFocus",
       "shift shift": "project_panel::ToggleFocus",
+      "ctrl-[": "git::Branch",
       "ctrl-]": "projects::OpenRecent",
-      "ctrl-[": "branches::OpenRecent"
+      "cmd-m": "agent::ToggleFocus"
     }
   },
   {
@@ -12,7 +14,6 @@
       "tab": "pane::ActivateNextItem",
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
-      "space": "outline::Toggle",
       ">": "editor::Indent",
       "<": "editor::Outdent"
     }
@@ -23,9 +24,17 @@
       "[ x": "editor::SelectLargerSyntaxNode",
       "] x": "editor::SelectSmallerSyntaxNode",
       "[ d": "editor::GoToDiagnostic",
-      "] d": "editor::GoToPrevDiagnostic",
+      "] d": "editor::GoToPreviousDiagnostic",
       "[ c": "editor::GoToHunk",
-      "] c": "editor::GoToPrevHunk"
+      "] c": "editor::GoToPreviousHunk",
+      "[ z": "editor::FoldAll",
+      "] z": "editor::UnfoldAll"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "shift shift": "editor::AcceptEditPrediction"
     }
   },
   {
@@ -39,18 +48,13 @@
       "y": "project_panel::Copy",
       "p": "project_panel::Paste",
       "w": "project_panel::Open",
-      "shift-r": "project_panel::CopyRelativePath",
       "shift-k": "project_panel::CollapseSelectedEntry",
       "shift-j": "project_panel::ExpandSelectedEntry",
       "ctrl-d": ["workspace::SendKeystrokes", "j j j j j j j j"],
-      "ctrl-u": ["workspace::SendKeystrokes", "k k k k k k k k"]
-    }
-  },
-  {
-    "context": "Editor && (showing_code_actions || showing_completions)",
-    "bindings": {
-      "k": "editor::ContextMenuPrev",
-      "j": "editor::ContextMenuNext"
+      "ctrl-u": ["workspace::SendKeystrokes", "k k k k k k k k"],
+      // multi select
+      "] d": "project_panel::SelectPrevDiagnostic",
+      "[ d": "project_panel::SelectNextDiagnostic"
     }
   }
 ]
